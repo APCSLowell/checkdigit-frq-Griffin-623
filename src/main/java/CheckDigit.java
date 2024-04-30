@@ -7,7 +7,13 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-     /* to be implemented in part (a) */
+    int g = 7; 
+     int total = 0;
+     for(int i = 0;i<getNumberOfDigits(num);i++){
+      total = getDigit(num,i+1)*g+total;
+        g--;
+    }
+     return total%10;
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
